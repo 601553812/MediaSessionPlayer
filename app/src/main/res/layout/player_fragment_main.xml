@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="songBean"
+            type="com.pxh.myMediaSessionPlayer.model.SongBean" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/purple_200"
+        tools:context=".view.fragment.MainFragment">
+
+
+        <TextView
+            android:id="@+id/tv_song_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{songBean.id}"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{songBean.title}" />
+
+        <TextView
+            android:id="@+id/tv_song_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{songBean.artist}" />
+
+        <TextView
+            android:id="@+id/tv_song_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{songBean.album}" />
+
+        <TextView
+            android:id="@+id/tv_song_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{songBean.showTime()}" />
+
+        <Button
+            android:id="@+id/bt_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pause" />
+
+        <Button
+            android:id="@+id/bt_prev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prev" />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next" />
+
+        <Button
+            android:id="@+id/bt_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/playlist" />
+    </LinearLayout>
+</layout>
